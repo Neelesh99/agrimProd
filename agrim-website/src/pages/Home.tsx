@@ -1,10 +1,19 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '../components/Button';
 import ProductCard from '../components/ProductCard';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const Home: React.FC = () => {
+  const navigate = useNavigate();
+
+  const navigateToProductDetail = (productName: string) => {
+    // Convert product name to URL-friendly format
+    const productSlug = productName.toLowerCase().replace(/\s+/g, '-');
+    navigate(`/products/${productSlug}`);
+  };
+
   return (
     <div className="bg-white text-gray-800">
       <Header />
@@ -58,10 +67,10 @@ const Home: React.FC = () => {
 
           {/* Products Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-            <ProductCard title="Cassia" />
-            <ProductCard title="Cloves" />
-            <ProductCard title="Desiccated Coconut" />
-            <ProductCard title="Coconut Cream" />
+            <ProductCard title="Cassia" onClick={() => navigateToProductDetail('Cassia')} />
+            <ProductCard title="Cloves" onClick={() => navigateToProductDetail('Cloves')} />
+            <ProductCard title="Desiccated Coconut" onClick={() => navigateToProductDetail('Desiccated Coconut')} />
+            <ProductCard title="Coconut Cream" onClick={() => navigateToProductDetail('Coconut Milk/Cream')} />
           </div>
 
           {/* Button */}

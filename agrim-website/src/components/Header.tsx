@@ -21,11 +21,11 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-6 py-2 flex justify-center items-center space-x-6 text-sm">
           <Link to="/about" className="hover:underline">About us</Link>
           <span className='text-gray-300'>•</span>
-          <a href="#products" className="hover:underline">Products</a>
+          <a href="/products" className="hover:underline">Products</a>
           <span className='text-gray-300'>•</span>
-          <a href="#exhibitions" className="hover:underline">Exhibitions</a>
+          <a href="/exhibitions" className="hover:underline">Exhibitions</a>
           <span className='text-gray-300'>•</span>
-          <a href="#gallery" className="hover:underline">Gallery</a>
+          <a href="/gallery" className="hover:underline">Gallery</a>
           <span className='text-gray-300'>•</span>
           <Link to="/contact" className="hover:underline">Contact us</Link>
         </div>
