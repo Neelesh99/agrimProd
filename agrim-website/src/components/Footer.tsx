@@ -1,3 +1,6 @@
+import whatsappLogo from "../assets/whatsapp.png"
+import linkedInLogo from "../assets/original/Linkedin_circle_black-512.png"
+import emailLogo from "../assets/original/Pasted_Graphic-removebg-preview.png"
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -15,9 +18,9 @@ const Footer: React.FC = () => {
           </ul>
           {/* Column 2 */}
           <ul className="space-y-2">
-            <li><a href="#products" className="hover:underline">Products</a></li>
-            <li><a href="#exhibitions" className="hover:underline">Exhibitions</a></li>
-            <li><a href="#gallery" className="hover:underline">Gallery</a></li>
+            <li><Link to="/products" className="hover:underline">Products</Link></li>
+            <li><Link to="/exhibitions" className="hover:underline">Exhibitions</Link></li>
+            <li><Link to="/gallery" className="hover:underline">Gallery</Link></li>
           </ul>
         </div>
 
@@ -27,31 +30,31 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Contact Info - Moved to right */}
-        <div className="space-y-4">
-          <div>
-            <h4 className="font-semibold mb-1">Follow us</h4>
-            {/* Placeholder Icon */}
-            <a href="#" className="inline-flex items-center hover:underline">
-              <span className="mr-2">[in]</span> {/* Placeholder for LinkedIn icon */}
-              <span>linkedin.com/company/agrimltd/</span> { /* TODO: Make actual link */} 
-            </a>
-          </div>
-          <div>
-            <h4 className="font-semibold mb-1">Email us</h4>
-            {/* Placeholder Icon */}
-            <a href="mailto:trade@agrimltd.com" className="inline-flex items-center hover:underline">
-              <span className="mr-2">[@]</span> {/* Placeholder for Email icon */}
-              <span>trade@agrimltd.com</span>
-            </a>
-          </div>
-          <div>
-            <h4 className="font-semibold mb-1">Whatsapp us</h4>
-            {/* Placeholder Icon */}
-            <a href="https://wa.me/628116000625" target="_blank" rel="noopener noreferrer" className="inline-flex items-center hover:underline">
-              <span className="mr-2">[wa]</span> {/* Placeholder for Whatsapp icon */}
-              <span>+62 811 6000 625</span>
-            </a>
-          </div>
+        <div className="space-y-8 text-center">
+        <div className="flex flex-row w-56 justify-between">
+                        <div className="text-xl text-white self-center">
+                            Follow Us
+                        </div>
+                        <a href="https://www.linkedin.com/company/agrimltd/">
+                            <img className="h-12 cursor-pointer" src={whatsappLogo}/>
+                        </a>
+                    </div>
+                    <div className="flex flex-row w-56 justify-between">
+                        <div className="text-xl text-white self-center">
+                            Email Us
+                        </div>
+                        <a href="mailto:trade@agrimltd.com">
+                            <img className="h-12 cursor-pointer" src={emailLogo}/>
+                        </a>
+                    </div>
+                    <div className="flex flex-row w-56 justify-between">
+                        <div className="text-xl text-white self-center">
+                            Whatsapp Us
+                        </div>
+                        <a href="tel:+62 811 6000 625">
+                            <img className="h-12 cursor-pointer" src={linkedInLogo}/>
+                        </a>
+                    </div>
         </div>
 
       </div>

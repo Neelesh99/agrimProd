@@ -4,6 +4,25 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProductCard from '../components/ProductCard';
 import { findProductData } from '../data/ProductsPageDataSource';
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
+// Helper function to get product image
+export const getProductImage = (productName: string): string | undefined => {
+    const productSlug = productName.toLowerCase().replace(/\s+/g, '-');
+    console.log(productSlug);
+    const productKey = productSlug ? 
+    productSlug
+      .split('-')
+      .map((part, index) => 
+        index === 0 ? part : part.charAt(0).toUpperCase() + part.slice(1)
+      )
+      .join('') 
+    : '';
+    const productData = findProductData(productKey);
+    console.log(productData);
+    return productData?.imageSrc;
+  };
 
 const Products: React.FC = () => {
   const navigate = useNavigate();
@@ -14,20 +33,7 @@ const Products: React.FC = () => {
     navigate(`/products/${productSlug}`);
   };
 
-  // Helper function to get product image
-  const getProductImage = (productName: string): string | undefined => {
-    const productKey = productName
-      .toLowerCase()
-      .split(' ')
-      .map((part, index) => 
-        index === 0 ? part : part.charAt(0).toUpperCase() + part.slice(1)
-      )
-      .join('')
-      .replace(/[\/]/g, ''); // Remove any slashes in the name
-    
-    const productData = findProductData(productKey);
-    return productData?.imageSrc;
-  };
+  
 
   return (
     <div className="bg-white text-gray-800">
@@ -46,22 +52,22 @@ const Products: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-6">
               <ProductCard 
                 title="Cassia" 
-                imageUrl={getProductImage('cassia')} 
+                imageUrl={getProductImage('Cassia')} 
                 onClick={() => navigateToProductDetail('Cassia')} 
               />
               <ProductCard 
                 title="Cloves" 
-                imageUrl={getProductImage('cloves')} 
+                imageUrl={getProductImage('Cloves')} 
                 onClick={() => navigateToProductDetail('Cloves')} 
               />
               <ProductCard 
                 title="Nutmeg" 
-                imageUrl={getProductImage('nutmeg')} 
+                imageUrl={getProductImage('Nutmeg')} 
                 onClick={() => navigateToProductDetail('Nutmeg')} 
               />
               <ProductCard 
                 title="Mace" 
-                imageUrl={getProductImage('mace')} 
+                imageUrl={getProductImage('Mace')} 
                 onClick={() => navigateToProductDetail('Mace')} 
               />
             </div>
@@ -69,23 +75,23 @@ const Products: React.FC = () => {
             {/* Spices Grid - Second Row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-6">
               <ProductCard 
-                title="Cloves Stem" 
-                imageUrl={getProductImage('clovesStem')} 
+                title="Cloves Stem"
+                imageUrl={getProductImage('Cloves Stem')} 
                 onClick={() => navigateToProductDetail('Cloves Stem')} 
               />
               <ProductCard 
                 title="White Cardamom" 
-                imageUrl={getProductImage('whiteCardamom')} 
+                imageUrl={getProductImage('White Cardamom')} 
                 onClick={() => navigateToProductDetail('White Cardamom')} 
               />
               <ProductCard 
                 title="Black Pepper" 
-                imageUrl={getProductImage('blackPepper')} 
+                imageUrl={getProductImage('Black Pepper')} 
                 onClick={() => navigateToProductDetail('Black Pepper')} 
               />
               <ProductCard 
                 title="Long Pepper" 
-                imageUrl={getProductImage('longPepper')} 
+                imageUrl={getProductImage('Long Pepper')} 
                 onClick={() => navigateToProductDetail('Long Pepper')} 
               />
             </div>
@@ -94,12 +100,12 @@ const Products: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
               <ProductCard 
                 title="Turmeric Slices" 
-                imageUrl={getProductImage('tumericSlices')} 
+                imageUrl={getProductImage('Turmeric Slices')} 
                 onClick={() => navigateToProductDetail('Turmeric Slices')} 
               />
               <ProductCard 
                 title="Galangal Slices" 
-                imageUrl={getProductImage('galangalSlices')} 
+                imageUrl={getProductImage('Galangal Slices')} 
                 onClick={() => navigateToProductDetail('Galangal Slices')} 
               />
               <div className="hidden md:block"></div>
@@ -115,22 +121,22 @@ const Products: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-6">
               <ProductCard 
                 title="Desiccated Coconut" 
-                imageUrl={getProductImage('dessicatedCoconut')} 
+                imageUrl={getProductImage('Desiccated Coconut')} 
                 onClick={() => navigateToProductDetail('Desiccated Coconut')} 
               />
               <ProductCard 
                 title="Coconut Water" 
-                imageUrl={getProductImage('coconutWater')} 
+                imageUrl={getProductImage('Coconut Water')} 
                 onClick={() => navigateToProductDetail('Coconut Water')} 
               />
               <ProductCard 
                 title="Coconut Milk/Cream" 
-                imageUrl={getProductImage('coconutMilk')} 
+                imageUrl={getProductImage('Coconut Milk Cream')} 
                 onClick={() => navigateToProductDetail('Coconut Milk Cream')} 
               />
               <ProductCard 
                 title="Coconut Sugar" 
-                imageUrl={getProductImage('coconutSugar')} 
+                imageUrl={getProductImage('Coconut Sugar')} 
                 onClick={() => navigateToProductDetail('Coconut Sugar')} 
               />
             </div>
@@ -139,17 +145,17 @@ const Products: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
               <ProductCard 
                 title="Virgin Coconut Oil" 
-                imageUrl={getProductImage('coconutOil')} 
+                imageUrl={getProductImage('Virgin Coconut Oil')} 
                 onClick={() => navigateToProductDetail('Virgin Coconut Oil')} 
               />
               <ProductCard 
                 title="Coconut Flour" 
-                imageUrl={getProductImage('coconutFlour')} 
+                imageUrl={getProductImage('Coconut Flour')} 
                 onClick={() => navigateToProductDetail('Coconut Flour')} 
               />
               <ProductCard 
                 title="Coconut Butter" 
-                imageUrl={getProductImage('coconutButter')} 
+                imageUrl={getProductImage('Coconut Butter')} 
                 onClick={() => navigateToProductDetail('Coconut Butter')} 
               />
               <div className="hidden md:block"></div>
@@ -159,8 +165,11 @@ const Products: React.FC = () => {
           {/* Manufacturing Process Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold mb-12">Our Manufacturing Process</h2>
-            <div className="aspect-video bg-gray-300 mx-auto max-w-4xl flex items-center justify-center">
-              <span className="text-xl">Youtube video embedded</span>
+            <div className="mx-auto max-w-4xl">
+              <LiteYouTubeEmbed
+                id="-aQHq6ZLDGI"
+                title="Agrim Manufacturing Process"
+              />
             </div>
           </div>
         </div>

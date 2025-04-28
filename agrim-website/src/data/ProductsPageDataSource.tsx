@@ -50,25 +50,25 @@ export function findProductData(productName: string): ProductData | undefined {
     if (productName === "longPepper") {
         return longPepperDescription()
     }
-    if (productName === "tumericSlices") {
+    if (productName === "turmericSlices") {
         return tumericSlicesDescription()
     }
     if (productName === "galangalSlices") {
         return galangalSlicesDescription()
     }
-    if (productName === "dessicatedCoconut") {
+    if (productName === "desiccatedCoconut") {
         return dessicatedCoconut()
     }
     if (productName === "coconutWater") {
         return coconutWater()
     }
-    if (productName === "coconutMilk") {
+    if (productName === "coconutMilkCream") {
         return coconutMilk()
     }
     if (productName === "coconutSugar") {
         return coconutSugar()
     }
-    if (productName === "coconutOil") {
+    if (productName === "virginCoconutOil") {
         return virginCoconutOil()
     }
     if (productName === "coconutFlour") {

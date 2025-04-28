@@ -45,11 +45,19 @@ const ProductDetail: React.FC = () => {
       <Header />
       
       <section className="container mx-auto py-12 px-6">
-        <h1 className="text-4xl font-bold mb-8 text-left">
-          {productSlug ? productSlug.split('-').map(word => 
-            word.charAt(0).toUpperCase() + word.slice(1)
-          ).join(' ') : ''}
-        </h1>
+        <div className="flex items-center gap-8 mb-8">
+          <span 
+            onClick={() => navigate('/products')}
+            className="text-gray-800 hover:text-orange-500 font-medium cursor-pointer transition duration-300"
+          >
+            ← Back to Products
+          </span>
+          <h1 className="text-4xl font-bold text-left">
+            {productSlug ? productSlug.split('-').map(word => 
+              word.charAt(0).toUpperCase() + word.slice(1)
+            ).join(' ') : ''}
+          </h1>
+        </div>
         
         <div className="flex flex-col md:flex-row gap-12 mb-12">
           {/* Product Image */}

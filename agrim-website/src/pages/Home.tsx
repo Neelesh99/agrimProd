@@ -4,6 +4,12 @@ import Button from '../components/Button';
 import ProductCard from '../components/ProductCard';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { getProductImage } from './Products';
+import coverImage from '../assets/original/coverImage.jpg';
+import sortingImage from '../assets/original/sorting.jpg';
+import qualityLogo from "../assets/original/TQSCI.jpeg"
+import gmp from "../assets/original/gmp.jpeg"
+import haccp from "../assets/original/haccp.jpeg"
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -14,6 +20,10 @@ const Home: React.FC = () => {
     navigate(`/products/${productSlug}`);
   };
 
+  const navigateToProducts = () => {
+    navigate('/products');
+  };
+
   return (
     <div className="bg-white text-gray-800">
       <Header />
@@ -21,7 +31,7 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section
         className="relative bg-cover bg-center text-white py-40 px-6"
-        style={{ backgroundImage: "url('https://via.placeholder.com/1920x800?text=Spice+Background')" }}
+        style={{ backgroundImage: `url(${coverImage})` }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div> {/* Overlay */}
         <div className="relative z-10 container mx-auto text-center">
@@ -32,7 +42,7 @@ const Home: React.FC = () => {
             <Button>
               About us
             </Button>
-            <Button>
+            <Button onClick={navigateToProducts}>
               Our products
             </Button>
           </div>
@@ -44,7 +54,7 @@ const Home: React.FC = () => {
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="rounded-lg overflow-hidden shadow-lg h-80">
-            <img src="https://via.placeholder.com/600x400?text=Factory+Image" alt="Agrim Factory" className="w-full h-full object-cover"/>
+            <img src={sortingImage} alt="Agrim Factory Workers Sorting" className="w-full h-full object-cover"/>
           </div>
           {/* Text Content */}
           <div className="text-left">
@@ -67,14 +77,14 @@ const Home: React.FC = () => {
 
           {/* Products Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-            <ProductCard title="Cassia" onClick={() => navigateToProductDetail('Cassia')} />
-            <ProductCard title="Cloves" onClick={() => navigateToProductDetail('Cloves')} />
-            <ProductCard title="Desiccated Coconut" onClick={() => navigateToProductDetail('Desiccated Coconut')} />
-            <ProductCard title="Coconut Cream" onClick={() => navigateToProductDetail('Coconut Milk/Cream')} />
+            <ProductCard title="Cassia" imageUrl={getProductImage('Cassia')} onClick={() => navigateToProductDetail('Cassia')} />
+            <ProductCard title="Cloves" imageUrl={getProductImage('Cloves')} onClick={() => navigateToProductDetail('Cloves')} />
+            <ProductCard title="Desiccated Coconut" imageUrl={getProductImage('Desiccated Coconut')} onClick={() => navigateToProductDetail('Desiccated Coconut')} />
+            <ProductCard title="Coconut Cream" imageUrl={getProductImage('Coconut Milk Cream')} onClick={() => navigateToProductDetail('Coconut Milk/Cream')} />
           </div>
 
           {/* Button */}
-          <Button>
+          <Button onClick={navigateToProducts}>
             Our products
           </Button>
         </div>
@@ -89,9 +99,9 @@ const Home: React.FC = () => {
           {/* Certifications Logos */}
           <div className="flex justify-center items-center space-x-8 md:space-x-16">
             {/* Placeholder Logos */}
-            <img src="https://via.placeholder.com/150x150?text=GMP+Certified" alt="GMP Certified" className="h-24 md:h-32 object-contain"/>
-            <img src="https://via.placeholder.com/150x150?text=HACCP+Certified" alt="HACCP Certified" className="h-24 md:h-32 object-contain"/>
-            <img src="https://via.placeholder.com/150x150?text=ISO+9001+Certified" alt="ISO 9001 Certified" className="h-24 md:h-32 object-contain"/>
+            <img src={gmp} alt="GMP Certified" className="h-24 md:h-32 object-contain"/>
+            <img src={haccp} alt="HACCP Certified" className="h-24 md:h-32 object-contain"/>
+            <img src={qualityLogo} alt="ISO 9001 Certified" className="h-24 md:h-32 object-contain"/>
             {/* Note: The image shows a 4th logo (TQCS?), add if needed */}
           </div>
         </div>

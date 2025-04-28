@@ -1,3 +1,14 @@
+import companyPic from "../assets/companyPic.png"
+import tick from "../assets/tick.png"
+import workersWorking from "../assets/original/workersWorking.jpeg"
+import handouts from "../assets/original/handout.jpeg"
+import multitasker from "../assets/original/icon-multitasker.png"
+import gloves from "../assets/original/icon-gloves.png"
+import lab from "../assets/original/icon-lab.png"
+import factory from "../assets/original/icon-factory.png"
+import gmp from "../assets/original/gmp.jpeg";
+import haccp from "../assets/original/haccp.jpeg";
+import qualityLogo from "../assets/original/TQSCI.jpeg";
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -19,7 +30,7 @@ const AboutUs: React.FC = () => {
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="rounded-2xl overflow-hidden shadow-lg h-80">
-            <img src="https://via.placeholder.com/600x400?text=Company+Team" alt="Agrim Team" className="w-full h-full object-cover"/>
+            <img src={companyPic} alt="Agrim Team" className="w-full h-full object-cover"/>
           </div>
           
           {/* Text Content */}
@@ -50,17 +61,17 @@ const AboutUs: React.FC = () => {
               
               <div className="md:col-span-3 space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="text-orange-500 text-3xl">⚪</div> {/* Placeholder for icon */}
+                <img src={tick} className="w-6 h-6"/>
                   <p>Specialise in procurement, processing and supplying of spices & coconut ingredients.</p>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="text-orange-500 text-3xl">⚪</div> {/* Placeholder for icon */}
+                <img src={tick} className="w-6 h-6"/>
                   <p>A global customer base with exports to 80+ countries.</p>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="text-orange-500 text-3xl">⚪</div> {/* Placeholder for icon */}
+                <img src={tick} className="w-6 h-6"/>
                   <p>High standard facilities with FSSC-22000, ISO-9001, HACCP and GMP certifications.</p>
                 </div>
               </div>
@@ -118,7 +129,7 @@ const AboutUs: React.FC = () => {
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="rounded-2xl overflow-hidden shadow-lg h-80">
-            <img src="https://via.placeholder.com/600x400?text=Team+Working" alt="Agrim Team Working" className="w-full h-full object-cover"/>
+            <img src={workersWorking} alt="Agrim Team Working" className="w-full h-full object-cover"/>
           </div>
           
           {/* Text Content */}
@@ -143,28 +154,28 @@ const AboutUs: React.FC = () => {
               {/* Facility Icons */}
               <div className="text-center">
                 <div className="flex justify-center mb-4">
-                  <img src="https://via.placeholder.com/80x80?text=Factory" alt="Factory" className="h-16 w-16 rounded-xl"/>
+                  <img src={factory} alt="Factory" className="h-16 w-16 rounded-xl"/>
                 </div>
                 <p className="text-gray-600 font-medium">20,000 sqm factory</p>
               </div>
               
               <div className="text-center">
                 <div className="flex justify-center mb-4">
-                  <img src="https://via.placeholder.com/80x80?text=Hygiene" alt="Hygiene" className="h-16 w-16 rounded-xl"/>
+                  <img src={gloves} alt="Hygiene" className="h-16 w-16 rounded-xl"/>
                 </div>
                 <p className="text-gray-600 font-medium">Hygiene work space</p>
               </div>
               
               <div className="text-center">
                 <div className="flex justify-center mb-4">
-                  <img src="https://via.placeholder.com/80x80?text=Lab" alt="Laboratory" className="h-16 w-16 rounded-xl"/>
+                  <img src={lab} alt="Laboratory" className="h-16 w-16 rounded-xl"/>
                 </div>
                 <p className="text-gray-600 font-medium">Equipped in-house laboratory</p>
               </div>
               
               <div className="text-center">
                 <div className="flex justify-center mb-4">
-                  <img src="https://via.placeholder.com/80x80?text=Workers" alt="Workers" className="h-16 w-16 rounded-xl"/>
+                  <img src={multitasker} alt="Workers" className="h-16 w-16 rounded-xl"/>
                 </div>
                 <p className="text-gray-600 font-medium">Skilled & trained workers</p>
               </div>
@@ -172,7 +183,7 @@ const AboutUs: React.FC = () => {
             
             {/* Facility Image */}
             <div className="rounded-2xl overflow-hidden shadow-lg h-80">
-              <img src="https://via.placeholder.com/600x400?text=Facility+Image" alt="Agrim Facility" className="w-full h-full object-cover"/>
+              <img src={handouts} alt="Agrim Facility" className="w-full h-full object-cover"/>
             </div>
           </div>
         </div>
@@ -186,9 +197,9 @@ const AboutUs: React.FC = () => {
 
           {/* Certifications Logos */}
           <div className="flex justify-center items-center space-x-8 md:space-x-16">
-            <img src="https://via.placeholder.com/150x150?text=GMP+Certified" alt="GMP Certified" className="h-24 md:h-32 object-contain rounded-xl"/>
-            <img src="https://via.placeholder.com/150x150?text=HACCP+Certified" alt="HACCP Certified" className="h-24 md:h-32 object-contain rounded-xl"/>
-            <img src="https://via.placeholder.com/150x150?text=ISO+9001+Certified" alt="ISO 9001 Certified" className="h-24 md:h-32 object-contain rounded-xl"/>
+            <img src={gmp} alt="GMP Certified" className="h-24 md:h-32 object-contain rounded-xl"/>
+            <img src={haccp} alt="HACCP Certified" className="h-24 md:h-32 object-contain rounded-xl"/>
+            <img src={qualityLogo} alt="ISO 9001 Certified" className="h-24 md:h-32 object-contain rounded-xl"/>
           </div>
         </div>
       </section>
