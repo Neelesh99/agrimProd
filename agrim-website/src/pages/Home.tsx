@@ -58,8 +58,8 @@ const Home: React.FC = () => {
           </div>
           {/* Text Content */}
           <div className="text-left">
-            <h2 className="text-3xl font-bold mb-4 text-gray-800 border-b-2 border-orange-500 pb-2 inline-block">Agrim PTE LTD</h2>
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <h2 className="text-3xl font-bold mb-4 text-black border-b-2 border-orange-500 pb-2 inline-block">Agrim PTE LTD</h2>
+            <p className="text-gray-800 mb-6 leading-relaxed">
               Present in the Indonesian spice market since 2004, we have acquired in-depth knowledge and expertise in regional products, enabling us to establish a global customer base in 80+ countries.
             </p>
             <Button>
@@ -73,10 +73,10 @@ const Home: React.FC = () => {
       <section className="bg-gray-900 text-white py-16">
         <div className="container mx-auto text-center px-6">
           <h2 className="text-3xl font-bold mb-2 border-b-2 border-orange-500 pb-2 inline-block">Our Products</h2>
-          <p className="text-gray-400 mb-12">We are experts in processing, producing, and exporting spices</p>
+          <p className="text-gray-100 mb-12">We are experts in processing, producing, and exporting spices</p>
 
           {/* Products Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12 mx-auto max-w-xs sm:max-w-none">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 mx-auto max-w-xs sm:max-w-none">
             <ProductCard title="Cassia" imageUrl={getProductImage('Cassia')} onClick={() => navigateToProductDetail('Cassia')} />
             <ProductCard title="Cloves" imageUrl={getProductImage('Cloves')} onClick={() => navigateToProductDetail('Cloves')} />
             <ProductCard title="Desiccated Coconut" imageUrl={getProductImage('Desiccated Coconut')} onClick={() => navigateToProductDetail('Desiccated Coconut')} />
@@ -93,8 +93,8 @@ const Home: React.FC = () => {
       {/* Certifications Section */}
       <section className="bg-white py-16 px-6">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-2 text-gray-800 border-b-2 border-orange-500 pb-2 inline-block">Certifications</h2>
-          <p className="text-gray-600 mb-12">Our factory is accredited with ISO-9001, HACCP, GMP certifications</p>
+          <h2 className="text-3xl font-bold mb-2 text-black border-b-2 border-orange-500 pb-2 inline-block">Certifications</h2>
+          <p className="text-gray-800 mb-12">Our factory is accredited with ISO-9001, HACCP, GMP certifications</p>
 
           {/* Certifications Logos */}
           <div className="flex justify-center items-center space-x-8 md:space-x-16">

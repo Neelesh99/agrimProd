@@ -26,7 +26,7 @@ const AboutUs: React.FC = () => {
       </section>
 
       {/* Indonesian Origin Section */}
-      <section className="py-8 px-6">
+      <section className="py-4 px-6">
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="rounded-2xl overflow-hidden shadow-lg h-80">
@@ -47,7 +47,7 @@ const AboutUs: React.FC = () => {
       </section>
 
       {/* Agrim Today Section */}
-      <section className="py-12 px-6 my-12">
+      <section className="py-8 px-6 my-4">
         <div className="container mx-auto">
           <div className="bg-[#2F4C39] text-white rounded-3xl shadow-lg p-8 relative">
             <h2 className="text-2xl font-bold mb-8 border-b-2 border-orange-500 pb-2 inline-block absolute top-6 left-8">Agrim today</h2>
@@ -125,7 +125,7 @@ const AboutUs: React.FC = () => {
       </section>
 
       {/* Our Team Section */}
-      <section className="py-12 px-6">
+      <section className="py-8 px-6 pb-4">
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="rounded-2xl overflow-hidden shadow-lg h-80">
@@ -143,7 +143,7 @@ const AboutUs: React.FC = () => {
       </section>
 
       {/* Our Facility Section */}
-      <section className="py-12 px-6">
+      <section className="py-8 px-6 pt-4 pb-4">
         <div className="container mx-auto">
           <div className="text-left">
             <h2 className="text-2xl font-bold mb-8 text-gray-800 border-b-2 border-orange-500 pb-2 inline-block">Our Facility</h2>
@@ -190,7 +190,7 @@ const AboutUs: React.FC = () => {
       </section>
 
       {/* Certifications Section */}
-      <section className="py-12 px-6">
+      <section className="py-8 px-6 pt-4">
         <div className="container mx-auto text-center">
           <h2 className="text-2xl font-bold mb-4 text-gray-800 border-b-2 border-orange-500 pb-2 inline-block">Certifications</h2>
           <p className="text-gray-600 mb-8">Our factory is accredited with ISO-9001, HACCP, GMP certifications</p>

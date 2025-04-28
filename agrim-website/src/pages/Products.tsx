@@ -158,6 +158,11 @@ const Products: React.FC = () => {
                 imageUrl={getProductImage('Coconut Butter')} 
                 onClick={() => navigateToProductDetail('Coconut Butter')} 
               />
+              <ProductCard 
+                title="Coconut Water Concentrate" 
+                imageUrl={getProductImage('Coconut Water Concentrate')} 
+                onClick={() => navigateToProductDetail('Coconut Water Concentrate')} 
+              />
               <div className="hidden md:block"></div>
             </div>
           </div>

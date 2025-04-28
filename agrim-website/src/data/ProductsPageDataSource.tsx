@@ -17,6 +17,7 @@ import sugar from "../assets/original/cocosugar.jpg"
 import oil from "../assets/original/Coconut_and_oil.jpg"
 import flour from "../assets/original/coconut-flour-2bbbf1d.jpg"
 import butter from "../assets/original/butter.jpeg"
+import waterConcentrate from "../assets/original/coconutWaterConcentrate.jpeg"
 import { JSX } from "react"
 
 export interface ProductData {
@@ -76,6 +77,9 @@ export function findProductData(productName: string): ProductData | undefined {
     }
     if (productName === "coconutButter") {
         return coconutButter()
+    }
+    if (productName === "coconutWaterConcentrate") {
+        return coconutWaterConcentrate()
     }
     return undefined
 }
@@ -287,5 +291,18 @@ function coconutButter() {
             BIB 20 Kg
         </div>,
         imageSrc: butter
+    }
+}
+
+function coconutWaterConcentrate() {
+    return {
+        description: <div>Coconut Water Concentrate is a processed form of coconut water where the water content is reduced to increase its shelf life and make transportation more efficient. It retains the natural electrolytes, minerals, and flavor of fresh coconut water but in a more concentrated form.
+
+            <p></p>
+            <p></p>
+            <div className="font-bold">Benefits</div>
+            Coconut water concentrate is rich in electrolytes, vitamins, and antioxidants, promoting hydration, heart health, and digestion. It’s a natural energy booster, supports metabolism, and enhances skin and hair health.
+        </div>,
+        imageSrc: waterConcentrate
     }
 }

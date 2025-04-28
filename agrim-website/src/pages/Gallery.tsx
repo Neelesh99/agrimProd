@@ -7,8 +7,21 @@ import agrimSeats from "../assets/original/agrimSeats.jpg"
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Button from '../components/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Gallery: React.FC = () => {
+  const navigate = useNavigate();
+  
+  // Navigation handlers
+  const navigateToProducts = () => {
+    navigate('/products');
+  };
+  
+  const navigateToContact = () => {
+    navigate('/contact');
+  };
+
   // Image data for the gallery
   const galleryImages = [
     {
@@ -48,10 +61,10 @@ const Gallery: React.FC = () => {
       <Header />
 
       {/* Gallery Hero Section */}
-      <section className="py-12 px-6 bg-gray-100">
+      <section className="py-12 px-6">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl font-bold mb-4 text-gray-800 border-b-2 border-orange-500 pb-2 inline-block">Gallery</h1>
-          <p className="text-gray-600 mb-4 max-w-2xl mx-auto">
+          <h1 className="text-4xl font-bold mb-4 text-gray-800 pb-2 inline-block">Gallery</h1>
+          <p className="text-gray-600 max-w-2xl mx-auto">
             Explore our facilities, products, and exhibition presence across the globe.
           </p>
         </div>
@@ -120,18 +133,17 @@ const Gallery: React.FC = () => {
             Visit our products page or contact us for more information.
           </p>
           <div className="flex justify-center space-x-4">
-            <a 
-              href="/products" 
-              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-md transition duration-300"
+            <Button 
+              onClick={navigateToProducts}
             >
               Our Products
-            </a>
-            <a 
-              href="/contact" 
-              className="bg-gray-700 hover:bg-gray-800 text-white px-6 py-2 rounded-md transition duration-300"
+            </Button>
+            <Button 
+              onClick={navigateToContact}
+              className="bg-gray-700 hover:bg-gray-800 focus:ring-gray-700"
             >
               Contact Us
-            </a>
+            </Button>
           </div>
         </div>
       </section>

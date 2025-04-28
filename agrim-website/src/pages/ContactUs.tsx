@@ -81,7 +81,7 @@ const ContactUs: React.FC = () => {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow px-8 py-12 max-w-7xl mx-auto w-full">
-        <h1 className="text-center mb-16 text-4xl text-gray-800 font-normal">Contact Us</h1>
+        <h1 className="text-center mb-16 text-4xl text-gray-800 font-bold">Contact Us</h1>
         <div className="flex flex-wrap lg:flex-nowrap gap-12 lg:gap-20 px-4 lg:px-8 max-w-6xl mx-auto">
           {/* Contact Form - takes more width */}
           <div className="w-full lg:w-3/5">
@@ -159,7 +159,7 @@ const ContactUs: React.FC = () => {
               <p className="text-center leading-relaxed">#09-43 Paya Lebar Square,</p>
               <p className="text-center leading-relaxed">Singapore - 409051</p>
               <p className="text-center leading-relaxed mt-3">Telephone: +65 6638 8646</p>
-              <p className="text-center leading-relaxed">Whatsapp: +65 9169 4785</p>
+              <p className="text-center leading-relaxed">WhatsApp: +65 9169 4785</p>
             </div>
 
             {/* Factories Section */}
@@ -176,7 +176,7 @@ const ContactUs: React.FC = () => {
               <p className="text-center mb-2"><span className="text-orange-500 font-bold">Pontianak, Indonesia</span></p>
               <p className="text-center leading-relaxed">Coconut Ingredients</p>
               <p className="text-center mt-2">
-                <a href="https://www.unicoconut.com" target="_blank" rel="noopener noreferrer" className="text-orange-300 hover:underline">www.unicoconut.com</a>
+                <a href="https://www.unicoconut.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:underline">www.unicoconut.com</a>
               </p>
             </div>
           </div>

@@ -26,7 +26,7 @@ const EntryBox: React.FC<EntryBoxProps> = ({
 
   return (
     <div className="mb-8">
-      <label htmlFor={id} className="block mb-3 font-normal text-gray-700 text-left">
+      <label htmlFor={id} className="block mb-3 font-normal text-gray-700 text-left text-lg">
         {label}
       </label>
       {type === 'textarea' ? (
