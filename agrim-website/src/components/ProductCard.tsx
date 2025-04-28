@@ -11,7 +11,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, imageUrl, onClick }) =
   const navigate = useNavigate();
   const titleBaseStyles = "bg-orange-500 text-white font-semibold p-4 cursor-pointer transition duration-300 hover:bg-green-900";
   const imagePlaceholderStyles = "h-60 bg-gray-500 flex items-center justify-center"; // Increased height for aspect ratio
-  const cardBaseStyles = "bg-gray-700 rounded-3xl overflow-hidden shadow-lg flex flex-col max-w-[270px]";
+  const cardBaseStyles = "bg-gray-700 rounded-3xl overflow-hidden shadow-lg flex flex-col max-w-[270px] mx-auto";
 
   const handleClick = () => {
     if (onClick) {

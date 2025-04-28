@@ -76,7 +76,7 @@ const Home: React.FC = () => {
           <p className="text-gray-400 mb-12">We are experts in processing, producing, and exporting spices</p>
 
           {/* Products Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12 mx-auto max-w-xs sm:max-w-none">
             <ProductCard title="Cassia" imageUrl={getProductImage('Cassia')} onClick={() => navigateToProductDetail('Cassia')} />
             <ProductCard title="Cloves" imageUrl={getProductImage('Cloves')} onClick={() => navigateToProductDetail('Cloves')} />
             <ProductCard title="Desiccated Coconut" imageUrl={getProductImage('Desiccated Coconut')} onClick={() => navigateToProductDetail('Desiccated Coconut')} />

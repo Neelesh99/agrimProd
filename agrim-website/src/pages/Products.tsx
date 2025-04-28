@@ -49,7 +49,7 @@ const Products: React.FC = () => {
             <h3 className="text-2xl font-bold mb-8 text-left">Spices</h3>
             
             {/* Spices Grid - First Row */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-6 mx-auto max-w-xs sm:max-w-none">
               <ProductCard 
                 title="Cassia" 
                 imageUrl={getProductImage('Cassia')} 
@@ -73,7 +73,7 @@ const Products: React.FC = () => {
             </div>
             
             {/* Spices Grid - Second Row */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-6 mx-auto max-w-xs sm:max-w-none">
               <ProductCard 
                 title="Cloves Stem"
                 imageUrl={getProductImage('Cloves Stem')} 
@@ -97,7 +97,7 @@ const Products: React.FC = () => {
             </div>
             
             {/* Spices Grid - Third Row */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mx-auto max-w-xs sm:max-w-none">
               <ProductCard 
                 title="Turmeric Slices" 
                 imageUrl={getProductImage('Turmeric Slices')} 
@@ -118,7 +118,7 @@ const Products: React.FC = () => {
             <h3 className="text-2xl font-bold mb-8 text-left">Coconut Products</h3>
             
             {/* Coconut Products Grid - First Row */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-6 mx-auto max-w-xs sm:max-w-none">
               <ProductCard 
                 title="Desiccated Coconut" 
                 imageUrl={getProductImage('Desiccated Coconut')} 
@@ -142,7 +142,7 @@ const Products: React.FC = () => {
             </div>
             
             {/* Coconut Products Grid - Second Row */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mx-auto max-w-xs sm:max-w-none">
               <ProductCard 
                 title="Virgin Coconut Oil" 
                 imageUrl={getProductImage('Virgin Coconut Oil')} 
