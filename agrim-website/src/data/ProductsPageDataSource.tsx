@@ -3,13 +3,13 @@ import cutter from "../assets/original/Cutter1.jpg"
 import cassiaMix from "../assets/original/Cassia-Mix.jpg"
 import cloves from "../assets/Cloves.png"
 import nutmeg from "../assets/original/nutmegOnly.jpg"
-import mace from "../assets/original/mace.jpg"
+import mace from "../assets/original/maceNew.jpg"
 import blackPepper from "../assets/original/blackPepper.jpg"
 import clovesStem from "../assets/original/cloveStem.jpg"
 import whiteCardamom from "../assets/original/WhiteCardamom.jpg"
 import longPepper from "../assets/original/LongPepper-1.jpg"
-import tumericSlices from "../assets/original/tumericSlices.jpg"
-import galangalSlices from "../assets/original/GalangalSlices.png"
+import tumericSlices from "../assets/original/turmericNew.jpeg"
+import galangalSlices from "../assets/original/galangalNew.jpeg"
 import dessicated from "../assets/original/dessicated.jpeg"
 import water from "../assets/original/coconutWater.jpeg"
 import milkCream from "../assets/original/coconut-milkcream.jpg"
@@ -17,7 +17,8 @@ import sugar from "../assets/original/cocosugar.jpg"
 import oil from "../assets/original/Coconut_and_oil.jpg"
 import flour from "../assets/original/coconut-flour-2bbbf1d.jpg"
 import butter from "../assets/original/butter.jpeg"
-import waterConcentrate from "../assets/original/coconutWaterConcentrate.jpeg"
+import waterConcentrate from "../assets/original/cwc.jpeg"
+import coffee from "../assets/original/coffee.jpg"
 import { JSX } from "react"
 
 export interface ProductData {
@@ -80,6 +81,9 @@ export function findProductData(productName: string): ProductData | undefined {
     }
     if (productName === "coconutWaterConcentrate") {
         return coconutWaterConcentrate()
+    }       
+    if (productName === "coffee") {
+        return coffeeDescription()
     }
     return undefined
 }
@@ -304,5 +308,22 @@ function coconutWaterConcentrate() {
             Coconut water concentrate is rich in electrolytes, vitamins, and antioxidants, promoting hydration, heart health, and digestion. It’s a natural energy booster, supports metabolism, and enhances skin and hair health.
         </div>,
         imageSrc: waterConcentrate
+    }
+}
+
+function coffeeDescription() {
+    return {
+        description: 
+        <div>
+            Robusta coffee beans are sourced from the lush, volcanic regions of Indonesia, our premium Robusta coffee beans are known for their bold flavor, rich aroma, and high caffeine content. Grown at lower altitudes and carefully sun-dried, these beans offer a deep, earthy profile with notes of dark chocolate and a hint of spice—perfect for strong espresso blends or a robust cup of coffee.
+            <p></p>
+            <div className="font-bold">Benefits</div>
+            High caffeine content for a strong energy boost<br/>
+            Rich, bold flavor ideal for espresso and dark roasts<br/>
+            Naturally resistant to pests and disease, promoting sustainable farming<br/>
+            Lower acidity for a smoother taste and gentler on the stomach
+
+        </div>,
+        imageSrc: coffee
     }
 }

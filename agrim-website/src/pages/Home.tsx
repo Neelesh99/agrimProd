@@ -24,6 +24,10 @@ const Home: React.FC = () => {
     navigate('/products');
   };
 
+  const navigateToAbout = () => {
+    navigate('/about');
+  };
+
   return (
     <div className="bg-white text-gray-800">
       <Header />
@@ -39,7 +43,7 @@ const Home: React.FC = () => {
             Manufacturer and supplier of<br />spices and coconut ingredients from<br />Indonesia
           </h1>
           <div className="mt-8 space-x-4">
-            <Button>
+            <Button onClick={navigateToAbout}>
               About us
             </Button>
             <Button onClick={navigateToProducts}>
@@ -58,11 +62,11 @@ const Home: React.FC = () => {
           </div>
           {/* Text Content */}
           <div className="text-left">
-            <h2 className="text-3xl font-bold mb-4 text-black border-b-2 border-orange-500 pb-2 inline-block">Agrim PTE LTD</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black border-b-2 border-orange-500 pb-2 inline-block">Our Company</h2>
             <p className="text-gray-800 mb-6 leading-relaxed">
               Present in the Indonesian spice market since 2004, we have acquired in-depth knowledge and expertise in regional products, enabling us to establish a global customer base in 80+ countries.
             </p>
-            <Button>
+            <Button onClick={navigateToAbout}>
               About us
             </Button>
           </div>
@@ -77,15 +81,31 @@ const Home: React.FC = () => {
 
           {/* Products Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 mx-auto max-w-xs sm:max-w-none">
-            <ProductCard title="Cassia" imageUrl={getProductImage('Cassia')} onClick={() => navigateToProductDetail('Cassia')} />
-            <ProductCard title="Cloves" imageUrl={getProductImage('Cloves')} onClick={() => navigateToProductDetail('Cloves')} />
-            <ProductCard title="Desiccated Coconut" imageUrl={getProductImage('Desiccated Coconut')} onClick={() => navigateToProductDetail('Desiccated Coconut')} />
-            <ProductCard title="Coconut Cream" imageUrl={getProductImage('Coconut Milk Cream')} onClick={() => navigateToProductDetail('Coconut Milk/Cream')} />
+            <ProductCard 
+              title="Cassia" 
+              imageUrl={getProductImage('Cassia')} 
+              onClick={() => navigateToProductDetail('Cassia')} 
+            />
+            <ProductCard 
+              title="Cloves" 
+              imageUrl={getProductImage('Cloves')} 
+              onClick={() => navigateToProductDetail('Cloves')} 
+            />
+            <ProductCard 
+              title="Coffee" 
+              imageUrl={getProductImage('Coffee')} 
+              onClick={() => navigate('/products#coffee-products')} 
+            />
+            <ProductCard 
+              title="Coconut Products" 
+              imageUrl={getProductImage('Coconut Milk Cream')} 
+              onClick={() => navigate('/products#coconut-products')} 
+            />
           </div>
 
           {/* Button */}
           <Button onClick={navigateToProducts}>
-            Our products
+            More Products
           </Button>
         </div>
       </section>

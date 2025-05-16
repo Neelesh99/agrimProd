@@ -175,9 +175,6 @@ const ContactUs: React.FC = () => {
               
               <p className="text-center mb-2"><span className="text-orange-500 font-bold">Pontianak, Indonesia</span></p>
               <p className="text-center leading-relaxed">Coconut Ingredients</p>
-              <p className="text-center mt-2">
-                <a href="https://www.unicoconut.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:underline">www.unicoconut.com</a>
-              </p>
             </div>
           </div>
         </div>

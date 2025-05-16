@@ -1,7 +1,7 @@
 import companyPic from "../assets/companyPic.png"
 import tick from "../assets/tick.png"
 import workersWorking from "../assets/original/workersWorking.jpeg"
-import handouts from "../assets/original/handout.jpeg"
+import workersNew from "../assets/original/workersNew.jpeg"
 import multitasker from "../assets/original/icon-multitasker.png"
 import gloves from "../assets/original/icon-gloves.png"
 import lab from "../assets/original/icon-lab.png"
@@ -30,7 +30,7 @@ const AboutUs: React.FC = () => {
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="rounded-2xl overflow-hidden shadow-lg h-80">
-            <img src={companyPic} alt="Agrim Team" className="w-full h-full object-cover"/>
+            <img src={workersWorking} alt="Agrim Team" className="w-full h-full object-cover"/>
           </div>
           
           {/* Text Content */}
@@ -62,17 +62,17 @@ const AboutUs: React.FC = () => {
               <div className="md:col-span-3 space-y-6">
                 <div className="flex items-start space-x-4">
                 <img src={tick} className="w-6 h-6"/>
-                  <p>Specialise in procurement, processing and supplying of spices & coconut ingredients.</p>
+                  <p className="text-left">Specialise in procurement, processing and supplying of spices & coconut ingredients.</p>
                 </div>
                 
                 <div className="flex items-start space-x-4">
                 <img src={tick} className="w-6 h-6"/>
-                  <p>A global customer base with exports to 80+ countries.</p>
+                  <p className="text-left">A global customer base with exports to 80+ countries.</p>
                 </div>
                 
                 <div className="flex items-start space-x-4">
                 <img src={tick} className="w-6 h-6"/>
-                  <p>High standard facilities with FSSC-22000, ISO-9001, HACCP and GMP certifications.</p>
+                  <p className="text-left">High standard facilities with FSSC-22000, ISO-9001, HACCP and GMP certifications.</p>
                 </div>
               </div>
             </div>
@@ -102,7 +102,7 @@ const AboutUs: React.FC = () => {
             {/* Quality */}
             <div className="text-center md:text-left">
               <div className="flex justify-center md:justify-start mb-4">
-                <div className="text-orange-500 text-4xl">🎯</div> {/* Placeholder for icon */}
+                <div className="text-orange-500 text-4xl">🔍</div> {/* Placeholder for icon */}
               </div>
               <h3 className="text-xl font-bold mb-3 text-white">Quality</h3>
               <p className="text-gray-300">
@@ -129,14 +129,14 @@ const AboutUs: React.FC = () => {
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="rounded-2xl overflow-hidden shadow-lg h-80">
-            <img src={workersWorking} alt="Agrim Team Working" className="w-full h-full object-cover"/>
+            <img src={companyPic} alt="Agrim Team Working" className="w-full h-full object-cover"/>
           </div>
           
           {/* Text Content */}
           <div className="text-left">
             <h2 className="text-2xl font-bold mb-4 text-gray-800 border-b-2 border-orange-500 pb-2 inline-block">Our Team</h2>
             <p className="text-gray-600 leading-relaxed">
-              Our dedicated team of 120 professionals drives our market strength through collaboration and efficiency. We invest in comprehensive training and regular workshops to continually enhance their skills and expertise.
+              Our dedicated workforce of 150 people drives our market strength through collaboration and efficiency. We invest in comprehensive training and regular workshops to continually enhance their skills and expertise.
             </p>
           </div>
         </div>
@@ -145,45 +145,46 @@ const AboutUs: React.FC = () => {
       {/* Our Facility Section */}
       <section className="py-8 px-6 pt-4 pb-4">
         <div className="container mx-auto">
-          <div className="text-left">
-            <h2 className="text-2xl font-bold mb-8 text-gray-800 border-b-2 border-orange-500 pb-2 inline-block">Our Facility</h2>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="grid grid-cols-2 gap-8">
-              {/* Facility Icons */}
-              <div className="text-center">
-                <div className="flex justify-center mb-4">
-                  <img src={factory} alt="Factory" className="h-16 w-16 rounded-xl"/>
-                </div>
-                <p className="text-gray-600 font-medium">20,000 sqm factory</p>
+          <div className="flex flex-col md:flex-row gap-12">
+            <div className="md:w-1/2">
+              <div className="text-left w-full">
+                <h2 className="text-2xl font-bold mb-6 text-gray-800 border-b-2 border-orange-500 pb-2 inline-block">Our Facility</h2>
               </div>
-              
-              <div className="text-center">
-                <div className="flex justify-center mb-4">
-                  <img src={gloves} alt="Hygiene" className="h-16 w-16 rounded-xl"/>
+              <div className="grid grid-cols-2 gap-8">
+                {/* Facility Icons */}
+                <div className="text-center">
+                  <div className="flex justify-center mb-4">
+                    <img src={factory} alt="Factory" className="h-16 w-20 rounded-xl"/>
+                  </div>
+                  <p className="text-gray-600 font-medium">20,000 sqm factory</p>
                 </div>
-                <p className="text-gray-600 font-medium">Hygiene work space</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="flex justify-center mb-4">
-                  <img src={lab} alt="Laboratory" className="h-16 w-16 rounded-xl"/>
+                
+                <div className="text-center">
+                  <div className="flex justify-center mb-4">
+                    <img src={gloves} alt="Hygiene" className="h-16 w-16 rounded-xl"/>
+                  </div>
+                  <p className="text-gray-600 font-medium">Hygiene work space</p>
                 </div>
-                <p className="text-gray-600 font-medium">Equipped in-house laboratory</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="flex justify-center mb-4">
-                  <img src={multitasker} alt="Workers" className="h-16 w-16 rounded-xl"/>
+                
+                <div className="text-center">
+                  <div className="flex justify-center mb-4">
+                    <img src={lab} alt="Laboratory" className="h-16 w-24 rounded-xl"/>
+                  </div>
+                  <p className="text-gray-600 font-medium">Equipped in-house laboratory</p>
                 </div>
-                <p className="text-gray-600 font-medium">Skilled & trained workers</p>
+                
+                <div className="text-center">
+                  <div className="flex justify-center mb-4">
+                    <img src={multitasker} alt="Workers" className="h-16 w-16 rounded-xl"/>
+                  </div>
+                  <p className="text-gray-600 font-medium">Skilled & trained workers</p>
+                </div>
               </div>
             </div>
             
             {/* Facility Image */}
-            <div className="rounded-2xl overflow-hidden shadow-lg h-80">
-              <img src={handouts} alt="Agrim Facility" className="w-full h-full object-cover"/>
+            <div className="md:w-1/2 rounded-2xl overflow-hidden shadow-lg h-80">
+              <img src={workersNew} alt="Agrim Facility" className="w-full h-full object-cover"/>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-orange-500 text-white py-12 px-6">
+    <footer className="bg-orange-500 text-white py-8 px-6">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Navigation Links */}
         <div className="grid grid-cols-2 gap-8 md:gap-4 text-left md:text-left text-center mx-auto md:mx-0">
@@ -30,13 +30,13 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Contact Info - Moved to right */}
-        <div className="space-y-8 text-center mx-auto md:mx-0">
+        <div className="space-y-4 text-center mx-auto md:mx-0">
         <div className="flex flex-row w-56 justify-between">
                         <div className="text-white self-center cursor-pointer hover:text-green-900 transition duration-300" onClick={() => window.open("https://www.linkedin.com/company/agrimltd/", "_blank")}>
                             Follow Us
                         </div>
                         <a href="https://www.linkedin.com/company/agrimltd/">
-                            <img className="h-12 cursor-pointer" src={linkedInLogo}/>
+                            <img className="h-8 cursor-pointer" src={linkedInLogo}/>
                         </a>
                     </div>
                     <div className="flex flex-row w-56 justify-between">
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
                             Email Us
                         </div>
                         <a href="mailto:trade@agrimltd.com">
-                            <img className="h-12 cursor-pointer" src={emailLogo}/>
+                            <img className="h-8 cursor-pointer" src={emailLogo}/>
                         </a>
                     </div>
                     <div className="flex flex-row w-56 justify-between">
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
                             WhatsApp Us
                         </div>
                         <a href="tel:+62 811 6000 625">
-                            <img className="h-12 cursor-pointer" src={whatsappLogo}/>
+                            <img className="h-8 cursor-pointer" src={whatsappLogo}/>
                         </a>
                     </div>
         </div>

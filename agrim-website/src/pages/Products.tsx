@@ -1,5 +1,5 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProductCard from '../components/ProductCard';
@@ -26,6 +26,33 @@ export const getProductImage = (productName: string): string | undefined => {
 
 const Products: React.FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    if (location.hash) {
+      // Remove the # character
+      const id = location.hash.substring(1);
+      
+      // Function to scroll with offset
+      const scrollToElement = () => {
+        const element = document.getElementById(id);
+        if (element) {
+          const headerHeight = 100; // Add extra offset to see header clearly
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = elementPosition - headerHeight;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      };
+      
+      // Wait for the page to fully render
+      setTimeout(scrollToElement, 300);
+    }
+  }, [location]);
 
   const navigateToProductDetail = (productName: string) => {
     // Convert product name to URL-friendly format (kebab-case)
@@ -45,7 +72,7 @@ const Products: React.FC = () => {
           <h2 className="text-3xl font-bold mb-12">Our Products</h2>
 
           {/* Spices Section */}
-          <div className="mb-16">
+          <div className="mb-16" id="spices">
             <h3 className="text-2xl font-bold mb-8 text-left">Spices</h3>
             
             {/* Spices Grid - First Row */}
@@ -114,7 +141,7 @@ const Products: React.FC = () => {
           </div>
 
           {/* Coconut Products Section */}
-          <div className="mb-16">
+          <div className="mb-16" id="coconut-products">
             <h3 className="text-2xl font-bold mb-8 text-left">Coconut Products</h3>
             
             {/* Coconut Products Grid - First Row */}
@@ -163,6 +190,23 @@ const Products: React.FC = () => {
                 imageUrl={getProductImage('Coconut Water Concentrate')} 
                 onClick={() => navigateToProductDetail('Coconut Water Concentrate')} 
               />
+              <div className="hidden md:block"></div>
+            </div>
+          </div>
+
+          {/* Coffee Products Section */}
+          <div className="mb-16" id="coffee-products">
+            <h3 className="text-2xl font-bold mb-8 text-left">Coffee Products</h3>
+            
+            {/* Coffee Products Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mx-auto max-w-xs sm:max-w-none">
+              <ProductCard 
+                title="Coffee" 
+                imageUrl={getProductImage('Coffee')} 
+                onClick={() => navigateToProductDetail('Coffee')} 
+              />
+              <div className="hidden md:block"></div>
+              <div className="hidden md:block"></div>
               <div className="hidden md:block"></div>
             </div>
           </div>
