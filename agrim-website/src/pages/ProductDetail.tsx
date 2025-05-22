@@ -48,7 +48,7 @@ const ProductDetail: React.FC = () => {
         <div className="flex items-center gap-8 mb-8">
           <span 
             onClick={() => navigate('/products')}
-            className="text-gray-800 hover:text-orange-500 font-medium cursor-pointer transition duration-300"
+            className="text-gray-800 hover:text-green-900 font-medium cursor-pointer transition duration-300"
           >
             ← Back to Products
           </span>

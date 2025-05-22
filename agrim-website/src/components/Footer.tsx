@@ -11,13 +11,13 @@ const Footer: React.FC = () => {
         {/* Navigation Links */}
         <div className="grid grid-cols-2 gap-8 md:gap-4 text-left md:text-left text-center mx-auto md:mx-0">
           {/* Column 1 */}
-          <ul className="space-y-2">
+          <ul className="space-y-4 flex flex-col justify-between">
             <li><Link to="/" className="hover:text-green-900 transition duration-300">Home</Link></li>
             <li><Link to="/about" className="hover:text-green-900 transition duration-300">About us</Link></li>
             <li><Link to="/contact" className="hover:text-green-900 transition duration-300">Contact us</Link></li>
           </ul>
           {/* Column 2 */}
-          <ul className="space-y-2">
+          <ul className="space-y-4 flex flex-col justify-between">
             <li><Link to="/products" className="hover:text-green-900 transition duration-300">Products</Link></li>
             <li><Link to="/exhibitions" className="hover:text-green-900 transition duration-300">Exhibitions</Link></li>
             <li><Link to="/gallery" className="hover:text-green-900 transition duration-300">Gallery</Link></li>

@@ -195,6 +195,7 @@ function dessicatedCoconut() {
         description: <div>Desiccated coconut is dried, shredded coconut meat that retains the rich flavor
             and texture of fresh coconut. It's commonly used in baking, cooking, and as a topping for various dishes, offering a sweet, nutty taste and a chewy texture. It's available in various forms, such as finely shredded or coarsely chopped.
             <p></p>
+            <br/>
             <div className="font-bold">Benefits</div>
             Desiccated coconut is rich in healthy fats, fiber, and essential minerals like iron and
             magnesium. It supports heart health, digestion, and provides a natural energy boost. Additionally, it's a good source of antioxidants and can be a versatile addition to various recipes.
@@ -208,6 +209,7 @@ function coconutWater() {
         description: <div>UHT (Ultra-High Temperature) coconut water is coconut water that has been
             heated to a high temperature for a brief period to kill harmful bacteria and extend shelf life without the need for preservatives. It retains most of the natural flavor and nutrients of fresh coconut water, offering a convenient, long-lasting, and refreshing drink that is rich in electrolytes, potassium, and hydration.
             <p></p>
+            <br/>
             <div className="font-bold">Benefits</div>
                 UHT coconut water hydrates, replenishes electrolytes, and is low in calories. It's rich in
             vitamins, minerals, and antioxidants, supporting heart health and digestion, while offering the convenience of a long shelf life.
@@ -224,6 +226,7 @@ function coconutMilk() {
         description: <div>Coconut milk and coconut cream are both made from the flesh of mature
             coconuts but differ in consistency and fat content. Coconut milk is a thin, creamy liquid produced by blending grated coconut flesh with water, commonly used in cooking and beverages. Coconut cream, on the other hand, is a richer, thicker version with a higher fat content, often used in desserts, sauces, or as a dairy substitute in rich dishes. Both provide a subtle coconut flavour, adding richness to recipes.
             <p></p>
+            <br/>
             <div className="font-bold">Benefits</div>
             Coconut milk and cream are rich in healthy fats, which can boost metabolism and
             provide energy. They're great dairy-free alternatives, support heart health, and are packed with vitamins and minerals. Additionally, they help boost immunity, promote skin health, and aid digestion.
@@ -237,6 +240,7 @@ function coconutSugar() {
         description: <div>Coconut Sugar is natural sugar made from the coconut palm tree sap's sugary fluid. The sap is placed at very high heat until water is evaporated and left with sugar granules. It is then sieved with different mesh sizes and packed.
 
             <p></p>
+            <br/>
             <div className="font-bold">Benefits</div>
             Coconut sugar is a natural sweetener with a low glycemic index, helping regulate blood sugar levels. It contains minerals like potassium, iron, and zinc, along with antioxidants for overall health.
         </div>,
@@ -250,6 +254,7 @@ function virginCoconutOil() {
             pressing process, preserving its natural flavor, nutrients, and aroma. It's unrefined and free from chemicals, making it a popular choice for cooking, skincare, and haircare due to its health benefits and versatility.
 
             <p></p>
+            <br/>
             <div className="font-bold">Benefits</div>
             Virgin coconut oil is rich in healthy fats, antioxidants, and antimicrobial properties. It
             supports heart health, boosts immunity, moisturizes skin, and promotes hair health. It can also aid digestion and provide a quick energy source.
@@ -268,9 +273,10 @@ function coconutFlour() {
             ground coconut meat. It has a mild coconut flavor and is commonly used in baking, especially for gluten-free and low-carb recipes. It absorbs more liquid than regular flour, so recipes may require adjustments.
 
             <p></p>
+            <br/>
             <div className="font-bold">Benefits</div>
             Coconut flour is high in fiber, gluten-free, and low in carbohydrates, making it ideal for
-            digestive health and weight management. It’s also rich in healthy fats and proteins, supporting energy and muscle health.
+            digestive health and weight management. It's also rich in healthy fats and proteins, supporting energy and muscle health.
 
             <p></p>
             <div className="font-bold">Packaging</div>
@@ -286,6 +292,7 @@ function coconutButter() {
             with both the oil and fiber of the coconut. It has a rich, nutty flavor and is often used as a spread, in baking, or as a dairy-free alternative in various recipes.
 
             <p></p>
+            <br/>
             <div className="font-bold">Benefits</div>
             Coconut butter is rich in healthy fats, fiber, and antioxidants. It supports heart health,
             digestion, and provides sustained energy. It also nourishes the skin and can be used as a natural moisturizer.
@@ -303,9 +310,9 @@ function coconutWaterConcentrate() {
         description: <div>Coconut Water Concentrate is a processed form of coconut water where the water content is reduced to increase its shelf life and make transportation more efficient. It retains the natural electrolytes, minerals, and flavor of fresh coconut water but in a more concentrated form.
 
             <p></p>
-            <p></p>
+            <br/>
             <div className="font-bold">Benefits</div>
-            Coconut water concentrate is rich in electrolytes, vitamins, and antioxidants, promoting hydration, heart health, and digestion. It’s a natural energy booster, supports metabolism, and enhances skin and hair health.
+            Coconut water concentrate is rich in electrolytes, vitamins, and antioxidants, promoting hydration, heart health, and digestion. It's a natural energy booster, supports metabolism, and enhances skin and hair health.
         </div>,
         imageSrc: waterConcentrate
     }
@@ -317,6 +324,7 @@ function coffeeDescription() {
         <div>
             Robusta coffee beans are sourced from the lush, volcanic regions of Indonesia, our premium Robusta coffee beans are known for their bold flavor, rich aroma, and high caffeine content. Grown at lower altitudes and carefully sun-dried, these beans offer a deep, earthy profile with notes of dark chocolate and a hint of spice—perfect for strong espresso blends or a robust cup of coffee.
             <p></p>
+            <br/>
             <div className="font-bold">Benefits</div>
             High caffeine content for a strong energy boost<br/>
             Rich, bold flavor ideal for espresso and dark roasts<br/>

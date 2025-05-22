@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 interface ProductCardProps {
@@ -9,9 +9,10 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ title, imageUrl, onClick }) => {
   const navigate = useNavigate();
-  const titleBaseStyles = "bg-orange-500 text-white font-semibold p-4 cursor-pointer transition duration-300 hover:bg-green-900";
-  const imagePlaceholderStyles = "h-60 bg-gray-500 flex items-center justify-center"; // Increased height for aspect ratio
-  const cardBaseStyles = "bg-gray-700 rounded-3xl overflow-hidden shadow-lg flex flex-col max-w-[270px] mx-auto";
+  const [isHovered, setIsHovered] = useState(false);
+  const titleBaseStyles = `text-white font-semibold p-4 cursor-pointer transition duration-300 ${isHovered ? 'bg-green-900' : 'bg-orange-500'}`;
+  const imagePlaceholderStyles = "h-60 bg-gray-500 flex items-center justify-center cursor-pointer"; // Added cursor-pointer
+  const cardBaseStyles = "bg-gray-700 rounded-3xl overflow-hidden shadow-lg flex flex-col max-w-[270px] mx-auto cursor-pointer";
 
   const handleClick = () => {
     if (onClick) {
@@ -23,7 +24,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, imageUrl, onClick }) =
   };
 
   return (
-    <div className={cardBaseStyles} onClick={handleClick}>
+    <div 
+      className={cardBaseStyles} 
+      onClick={handleClick}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div className={imagePlaceholderStyles}>
         {imageUrl ? (
           <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
