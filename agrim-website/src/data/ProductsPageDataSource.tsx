@@ -12,7 +12,6 @@ import tumericSlices from "../assets/original/turmericNew.jpeg"
 import galangalSlices from "../assets/original/galangalNew.jpeg"
 import dessicated from "../assets/original/dessicated.jpeg"
 import water from "../assets/original/coconutWater.jpeg"
-import milkCream from "../assets/original/coconut-milkcream.jpg"
 import sugar from "../assets/original/cocosugar.jpg"
 import oil from "../assets/original/Coconut_and_oil.jpg"
 import flour from "../assets/original/coconut-flour-2bbbf1d.jpg"
@@ -67,7 +66,7 @@ export function findProductData(productName: string): ProductData | undefined {
         return coconutWater()
     }
     if (productName === "coconutMilkCream") {
-        return coconutMilk()
+        return uhtFrozenCoconutDescription()
     }
     if (productName === "coconutSugar") {
         return coconutSugar()
@@ -223,21 +222,6 @@ function coconutWater() {
                 BIB (20kg) or Drum (225kg)
         </div>,
         imageSrc: water
-    }
-}
-
-function coconutMilk() {
-    return {
-        description: <div>Coconut milk and coconut cream are both made from the flesh of mature
-            coconuts but differ in consistency and fat content. Coconut milk is a thin, creamy liquid produced by blending grated coconut flesh with water, commonly used in cooking and beverages. Coconut cream, on the other hand, is a richer, thicker version with a higher fat content, often used in desserts, sauces, or as a dairy substitute in rich dishes. Both provide a subtle coconut flavour, adding richness to recipes.
-            <p></p>
-            <br/>
-            <div className="font-bold">Benefits</div>
-            Coconut milk and cream are rich in healthy fats, which can boost metabolism and
-            provide energy. They're great dairy-free alternatives, support heart health, and are packed with vitamins and minerals. Additionally, they help boost immunity, promote skin health, and aid digestion.
-        </div>,
-        imageSrc: milkCream,
-        title: "Coconut Milk/Cream"
     }
 }
 

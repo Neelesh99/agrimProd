@@ -157,7 +157,7 @@ const Products: React.FC = () => {
                 onClick={() => navigateToProductDetail('Coconut Water')} 
               />
               <ProductCard 
-                title="Coconut Milk/Cream" 
+                title="Frozen Coconut Milk/Cream" 
                 imageUrl={getProductImage('Coconut Milk Cream')} 
                 onClick={() => navigateToProductDetail('Coconut Milk Cream')} 
               />
@@ -192,18 +192,8 @@ const Products: React.FC = () => {
               />
               <div className="hidden md:block"></div>
             </div>
-
-            {/* Coconut Products Grid - Third Row */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mx-auto max-w-xs sm:max-w-none">
-              <ProductCard 
-                title="UHT & Frozen Coconut Milk/Cream" 
-                imageUrl={getProductImage('uht-frozen-coconut')} 
-                onClick={() => navigateToProductDetail('uht-frozen-coconut')} 
-              />
-    
-              <div className="hidden md:block"></div>
-            </div>
           </div>
+
 
           {/* Coffee Products Section */}
           <div className="mb-16" id="coffee-products">
