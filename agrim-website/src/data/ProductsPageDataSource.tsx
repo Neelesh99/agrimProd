@@ -19,12 +19,14 @@ import flour from "../assets/original/coconut-flour-2bbbf1d.jpg"
 import butter from "../assets/original/butter.jpeg"
 import waterConcentrate from "../assets/original/cwc.jpeg"
 import coffee from "../assets/original/coffee.jpg"
+import uhtFrozenCoconut from "../assets/original/coconut-milkcream.jpg"
 import { JSX } from "react"
 
 export interface ProductData {
     description: JSX.Element,
     imageSrc: string,
     lowerGallery?: JSX.Element,
+    title?: string
 }
 
 export function findProductData(productName: string): ProductData | undefined {
@@ -84,6 +86,9 @@ export function findProductData(productName: string): ProductData | undefined {
     }       
     if (productName === "coffee") {
         return coffeeDescription()
+    }
+    if (productName === "uhtFrozenCoconut") {
+        return uhtFrozenCoconutDescription()
     }
     return undefined
 }
@@ -231,7 +236,8 @@ function coconutMilk() {
             Coconut milk and cream are rich in healthy fats, which can boost metabolism and
             provide energy. They're great dairy-free alternatives, support heart health, and are packed with vitamins and minerals. Additionally, they help boost immunity, promote skin health, and aid digestion.
         </div>,
-        imageSrc: milkCream
+        imageSrc: milkCream,
+        title: "Coconut Milk/Cream"
     }
 }
 
@@ -333,5 +339,23 @@ function coffeeDescription() {
 
         </div>,
         imageSrc: coffee
+    }
+}
+
+function uhtFrozenCoconutDescription() {
+    return {
+        description: <div>Coconut milk and coconut cream are both made from the flesh of mature
+        coconuts but differ in consistency and fat content. Coconut milk is a thin, creamy liquid produced by blending grated coconut flesh with water, commonly used in cooking and beverages. Coconut cream, on the other hand, is a richer, thicker version with a higher fat content, often used in desserts, sauces, or as a dairy substitute in rich dishes. Both provide a subtle coconut flavour, adding richness to recipes.
+        <br/>
+        <br/>
+        <b>Benefits</b><br/>
+        Coconut milk and cream are rich in healthy fats, which can boost metabolism and
+        provide energy. They're great dairy-free alternatives, support heart health, and are packed with vitamins and minerals. Additionally, they help boost immunity, promote skin health, and aid digestion.
+        <br/><br/>
+        <b>Packaging</b><br/>
+        20kg BIB or 220kg Drum
+        </div>,
+        imageSrc: uhtFrozenCoconut,
+        title: "UHT & Frozen Coconut Milk/Cream"
     }
 }

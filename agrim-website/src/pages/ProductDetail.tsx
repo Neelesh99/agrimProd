@@ -53,9 +53,11 @@ const ProductDetail: React.FC = () => {
             ← Back to Products
           </span>
           <h1 className="text-4xl font-bold text-left">
-            {productSlug ? productSlug.split('-').map(word => 
-              word.charAt(0).toUpperCase() + word.slice(1)
-            ).join(' ') : ''}
+            {productData.title
+              ? productData.title
+              : (productSlug ? productSlug.split('-').map(word =>
+                  word.charAt(0).toUpperCase() + word.slice(1)
+                ).join(' ') : '')}
           </h1>
         </div>
         

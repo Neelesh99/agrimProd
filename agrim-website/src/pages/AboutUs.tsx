@@ -81,7 +81,7 @@ const AboutUs: React.FC = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-12 bg-black text-white">
+      <section className="py-12 bg-gray-900 text-white">
         <div className="container mx-auto px-6">
           <div className="text-left">
             <h2 className="text-3xl font-bold mb-8 text-white border-b-2 border-orange-500 pb-2 inline-block">Why choose us?</h2>
