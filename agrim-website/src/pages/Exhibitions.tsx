@@ -22,17 +22,17 @@ const Exhibitions: React.FC = () => {
 
           {/* Exhibitions Grid - First Row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 gap-y-16 mb-16">
-            {/* SIAL */}
+            {/* Anuga */}
             <div className="flex flex-col items-center">
               <div className="mb-6 h-24 flex items-center justify-center">
                 <img 
-                  src={sial} 
-                  alt="SIAL Paris Logo" 
+                  src={anuga} 
+                  alt="Anuga Cologne Logo" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <h3 className="text-xl font-semibold">Paris, France</h3>
-              <p className="text-gray-600">19 - 23 October 2024</p>
+              <h3 className="text-xl font-semibold">Cologne, Germany</h3>
+              <p className="text-gray-600">4 - 8 October 2025</p>
             </div>
 
             {/* Gulfood */}
@@ -48,18 +48,19 @@ const Exhibitions: React.FC = () => {
               <p className="text-gray-600">17 - 21 February 2025</p>
             </div>
 
-            {/* Anuga */}
+            {/* SIAL */}
             <div className="flex flex-col items-center">
               <div className="mb-6 h-24 flex items-center justify-center">
                 <img 
-                  src={anuga} 
-                  alt="Anuga Cologne Logo" 
-                  className="max-h-full max-w-full object-contain"
+                  src={sial} 
+                  alt="SIAL Paris Logo" 
+                  className="max-h-6/8 max-w-full object-contain"
                 />
               </div>
-              <h3 className="text-xl font-semibold">Cologne, Germany</h3>
-              <p className="text-gray-600">4 - 8 October 2025</p>
+              <h3 className="text-xl font-semibold">Paris, France</h3>
+              <p className="text-gray-600">19 - 23 October 2024</p>
             </div>
+
           </div>
 
           {/* Exhibitions Grid - Second Row */}

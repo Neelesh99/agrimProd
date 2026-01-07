@@ -157,7 +157,7 @@ const Products: React.FC = () => {
                 onClick={() => navigateToProductDetail('Coconut Water')} 
               />
               <ProductCard 
-                title="Frozen Coconut Milk/Cream" 
+                title="Coconut Milk/Cream" 
                 imageUrl={getProductImage('Coconut Milk Cream')} 
                 onClick={() => navigateToProductDetail('Coconut Milk Cream')} 
               />
